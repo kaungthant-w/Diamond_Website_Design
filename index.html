@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <title>ကမ္ဘာကျော်စိန်များ</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="p-4 flex items-center justify-between">
+    <div class="flex items-center space-x-4">
+      <div class="flex items-center -mt-4">
+        <a href="#">
+          <svg class="h-6 w-6 text-gray-300" fill="currentColor" viewBox="0 0 24 24">
+            <!-- Add your Facebook icon SVG code here -->
+            <i class="fab fa-facebook-f"></i>
+          </svg>
+        </a>
+        <a href="#">
+          <svg class="h-6 w-6 text-gray-300" fill="currentColor" viewBox="0 0 24 24">
+            <!-- Add your Twitter icon SVG code here -->
+            <i class="fab fa-twitter"></i>
+          </svg>
+        </a>
+        <a href="#">
+          <svg class="h-6 w-6 text-gray-300" fill="currentColor" viewBox="0 0 24 24">
+            <!-- Add your Instagram icon SVG code here -->
+            <i class="fab fa-instagram"></i>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <h1 class="text-lg uppercase text-5xl font-bold text-gray-200 drop-shadow-lg shadow-dark hover:text-gray-300">ဒိုင်းမွန်း</h1>
+    <div class="bg-gradient-to-b bg-gradient bg-gray-400 text-white px-5 md:px-4 py-1 md:py-2 rounded-md hover:bg-gray-500">
+      <button class="text-white text-xs md:text-sm font-bold drop-shadow">စာရင်းသွင်းပါ</button>
+    </div>
+  </header>
+
+  <div id="overlayMenu" class="absolute bg-opacity-50 bg-black z-10 h-full w-full hidden" onclick="toggleDropdown()"></div>
+  <header class="p-4 flex items-center justify-between">
+    <div class="flex items-center space-x-4">
+      <a href="#">
+        <svg class="h-6 w-6 text-gray-600 z-50" fill="currentColor" viewBox="0 0 24 24" id="menu">
+          <i class="fas fa-bars sm:relative" onclick="toggleMobileMenu()"></i>
+        </svg>
+      </a>
+    </div>
+    <div id="navbar" class="flex items-center space-x-8 rounded-lg border-2 border-gray-100 z-40 mt-2">
+      <ul class="md:flex items-center space-x-8 p-3 rounded-md" id="mobileNav">
+        <li class="my-4 md:my-2"><a href="#">ပင်မစာမျက်နှာ</a></li>
+        <li class="relative my-4 md:my-2">
+          <a href="#" onclick="toggleSubDropdown(event)">ကျောက်ရတနာပြပွဲ <i class="fa-solid fa-chevron-right text-gray-400 text-xs ml-2"></i></a>
+          <ul class="subdropdown absolute bg-gradient-to-br bg-gray-200 hidden text-gray-700 py-3 mt-1 rounded-md shadow-lg px-10 text-sm w-40">
+            <li class="mb-3 border-b-2 border-b-2 border-gray-200 z-40 w-100 hover:text-gray-900"><a href="#section1">စိန်ရှာဖွေမှုများ</a></li>
+            <li class="mb-3 border-b-2 border-b-2 border-gray-200 z-40 w-100 hover:text-gray-900"><a href="#section2">ဘယ်လိုရွေးချယ်မလဲ</a></li>
+            <li class="mb-3 border-b-2 border-b-2 border-gray-200 z-40 w-100 hover:text-gray-900"><a href="#section3">Gems ရှာဖွေမှုများ</a></li>
+          </ul>
+        </li>
+        <li class="my-4 md:my-2"><a href="#section4">ကျောက်မျက်လမ်းညွှန်</a></li>
+        <li class="my-4 md:my-2"><a href="#section5">ရတနာခရီး</a></li>
+        <li class="my-4 md:my-2"><a href="#section6">တောက်ပသောလမ်းများ</a></li>
+        <li class="my-4 md:my-2"><a href="#section7">ကျောက်မျက်များ</a></li>
+      </ul>
+    </div>
+    <div class="flex items-center space-x-4">
+      <a href="#" class="dark-mode-icon text-gray-600" onclick="toggleDarkMode()">
+        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+          <!-- Add your dark mode icon SVG code here -->
+          <i class="fas fa-moon"></i>
+        </svg>
+      </a>
+      <a href="#" class="dark-mode-icon text-gray-600">
+        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+          <!-- Add your search icon SVG code here -->
+          <i class="fas fa-search"></i>
+        </svg>
+      </a>
+    </div>
+  </header>
+
+  <main class="container mx-auto p-4">
+    <section id="section1" class="my-8 px-3">
+      <div class="flex flex-col md:flex-row">
+        <div class="md:w-4/5">
+          <div class="mb-4 md:relative">
+            <img src="https://cdn.hswstatic.com/gif/cullinan-diamond-1.jpg" alt="Image 1" class="w-full h-auto rounded-lg">
+            <div id="bgdark" class="md:absolute md:-bottom-32 bg-white rounded-md p-3 border-gray-500 m-3 shadow-sm">
+                <h2 class="text-2xl font-bold mt-2">Cullinan: ကမ္ဘာကျော်စိန်များ</h2>
+                <p class="text-gray-600 mb-2 text-sm">Date - 10.2.2023</p>
+                <p class="text-gray-700 mb-4">အာဖရိကကြယ်ပွင့်ဟုလည်းသိကြသည့် Cullinan I သည် အလေးချိန် 530.20 ကာရက်ရှိပြီး 545 ကာရက်ရွှေရတုစိန်ကို ပရီမီယာမိုင်းတွင်း၌ တွေ့ရှိချိန်အထိ ကမ္ဘာ့အကြီးဆုံး ပွတ်စိန်ဖြစ်ခဲ့သည်။</p>
+                <a href="#" class="text-indigo-500">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="md:w-2/5 md:ml-10">
+          <div class="mb-4">
+            <div class="flex flex-col">
+              <div class="mb-2">
+                <img src="https://www.graff.com/dw/image/v2/BFNT_PRD/on/demandware.static/-/Library-Sites-GraffSharedLibrary/default/dw5519ffa5/images/Close-up-of-Laurence-Graff-s-hands-holding-some-of-the-most-important-diamonds.jpg" alt="Image 2" class="w-full h-64 rounded bg-cover">
+                <h3 class="font-bold mt-2 text-sm">Graff lesedi la rona စိန်</h3>
+                <p class="text-gray-600 mb-2 text-sm">Date - 5.2.2022</p>
+                <p class="text-gray-700">302.37 ကာရက်ရှိ Graff Lesedi La Rona သည် GIA မှ အသိအမှတ်ပြုထားဖူးသော အကြည်လင်ဆုံးအရောင်အသွေးအကြီးဆုံး စိန်ဖြစ်သည်။</p>
+              </div>
+              <div>
+                <ul class=" md:pl-6 mt-5">
+                  <li class="my-2">
+                    <div class="flex items-center justify-between w-full">
+                      <div class="w-8/12">
+                        <h4 class="text-base font-bold">Graff စိန် (၁)</h4>
+                        <p class="text-sm text-gray-600 mb-2 text-sm">ကမ္ဘာ့ဒုတိယအကြီးဆုံး ကျောက်မျက်အရည်အသွေး စိန်။</p>
+                      </div>
+                      <div class="">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRDxEvysBO6-6dIYqbuOYKpm5EtnX-83uiQwnhAPBNYO8T5Cr2cp5W8a6QxPEQyN_lDy4&usqp=CAU" alt="Image 3" class="w-20 h-10">
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="flex items-center justify-between w-full">
+                        <div class="w-8/12">
+                            <h4 class="text-base font-bold">Graff စိန် (၂)</h4>
+                            <p class="text-sm text-gray-600">တွေ့ဖူးသမျှ စတုတ္ထအကြီးဆုံးစိန်နှင့် တတိယအကြီးဆုံး ကျောက်မျက်အရည်အသွေး။</p>
+                        </div>
+                        <div class="">
+                          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8Wl4VHlraSGGjWoK2dzCiWeC5TUP4Tg8mrY7mc9WapXoAiZc1GUCUUl9CllS2RsTYhiQ&usqp=CAU" alt="Image 3" class="w-20 h-10">
+                        </div>
+                      </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Add more sections here -->
+    <section id="section2" class="my-12 relative">
+      <div class="flex items-center justify-between mb-4">
+        <button id="prevButton" class="text-gray-600 -left-5 top-28 absolute">
+          <svg class="h-6 w-6" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+            <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"/>
+          </svg>
+        </button>
+        <button id="nextButton" class="text-gray-600 -right-5 top-28 absolute">
+          <svg class="h-6 w-6" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+            <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/>
+          </svg>
+        </button>
+      </div>
+      <div id="cardContainer" class="flex overflow-x-auto">
+        <div class="cursor-pointer flex-none w-64 mx-2">
+          <div class=" rounded-lg shadow-md p-4">
+            <img src="https://cdn.cnn.com/cnnnext/dam/assets/151203114655-big-diamond-tease-super-tease.jpg" alt="Image 1" class="w-full h-40 object-cover hover:opacity-80 mb-2">
+            <h3 class="text-lg font-semibold">စိန်အတွင်းပိုင်း စိန်ရှင်းလင်းရေး</h3>
+          </div>
+        </div>
+        <div class="cursor-pointer flex-none w-64 mx-2">
+          <div class=" rounded-lg shadow-md p-4">
+            <img src="https://www.moneyweb.co.za/wp-content/uploads/2017/01/russia-alrosa-diamonds-5-555x381.jpg" alt="Image 1" class="w-full h-40 object-cover hover:opacity-80 mb-2">
+            <h3 class="text-lg font-semibold">တန်ဖိုးအားဖြင့် ကမ္ဘာ့ထိပ်တန်း စိန်ထုတ်လုပ်သူ။</h3>
+          </div>
+        </div>
+        <!-- Repeat the card structure for the remaining card items -->
+        <div class="cursor-pointer flex-none w-64 mx-2">
+          <div class=" rounded-lg shadow-md p-4">
+            <img src="https://etimg.etb2bimg.com/thumb/msid-88032419,width-1200,resizemode-4/.jpg" alt="Image 1" class="w-full h-40 object-cover hover:opacity-80 mb-2">
+            <h3 class="text-lg font-semibold">AIM မှ Lucara Diamond Corp သို့ ရောင်းချခဲ့သည်။</h3>
+          </div>
+        </div>
+        <div class="cursor-pointer flex-none w-64 mx-2">
+          <div class=" rounded-lg shadow-md p-4">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN-yJ9sX8d28rOIfwg_xQeeaB50hwyxyn3tw&usqp=CAU" alt="Image 1" class="w-full h-40 object-cover hover:opacity-80 mb-2">
+            <h3 class="text-lg font-semibold">ကမ္ဘာတစ်ဝှမ်းရှိ ဈေးဝယ်စင်တာတိုင်းတွင် တွေ့နိုင်သည်။</h3>
+          </div>
+        </div>
+        <div class="cursor-pointer flex-none w-64 mx-2">
+          <div class=" rounded-lg shadow-md p-4">
+              <img src="data:image/jpeg;base64,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" alt="Image 1" class="w-full h-40 object-cover hover:opacity-80 mb-2">
+              <h3 class="text-lg font-semibold">စိန်လုပ်ငန်းရဲ့ လမ်းကြောင်းက ဘယ်လိုလဲ။</h3>
+            </div>
+        </div>
+        <div class="cursor-pointer flex-none w-64 mx-2">
+          <div class=" rounded-lg shadow-md p-4">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOqJ2DdgXowQcMf0ky3-j262QZNe2uZ2uZ5g&usqp=CAU" alt="Image 1" class="w-full h-40 object-cover hover:opacity-80 mb-2">
+            <h3 class="text-lg font-semibold">စိန်ဈေးကွက်က ဘယ်မှာလဲ။</h3>
+          </div>
+        </div>
+
+        <div class="cursor-pointer flex-none w-64 mx-2">
+          <div class=" rounded-lg shadow-md p-4">
+            <img src="https://www.whiteflash.com/articlefiles/thumbnails/1509.gif" alt="Image 1" class="w-full h-40 object-cover hover:opacity-80 mb-2">
+            <h3 class="text-lg font-semibold">စိန်အမျိုးအစား ဘယ်လောက်ရှိလဲ။</h3>
+          </div>
+        </div>
+        <div class="cursor-pointer flex-none w-64 mx-2">
+          <div class=" rounded-lg shadow-md p-4">
+            <img src="https://docs.growndiamondcorp.com/blogs/customblog9.jpg" alt="Image 1" class="w-full h-40 object-cover hover:opacity-80 mb-2">
+            <h3 class="text-lg font-semibold">စိန်ကောင်းတွေရဲ့ လက္ခဏာတွေက ဘာတွေလဲ။</h3>
+          </div>
+        </div>
+        <!-- Adjust the image source and title accordingly -->
+      </div>
+    </section>
+      
+      <section id="section3" class="my-20">
+        <div class="md:flex justify-center items-center md:h-40 shadow-lg">
+          <div class=" md:flex-1">
+            <div class="flex flex-col justify-center items-center h-full">
+              <h3 class="text-lg font-semibold">သတင်းအားလုံး</h3>
+              <h3 class="text-3xl font-extrabold md:text-5xl mb-5">စမတ်ကျကျ</h3>
+              <h3 class=" text-sm md:text-lg md:font-semibold md:uppercase ml-5 md:ml-0">ကမ္ဘာတစ်ဝှမ်းရှိ သုံးစွဲသူ 14000 ကျော်မှ ယုံကြည်ပါသည်။</h3>
+            </div>
+          </div>
+          <div class="md:flex-1 text-center my-4 md:my-2">
+            <button class="bg-indigo-600 text-white py-2 px-4 rounded-lg">စိန်ဝယ်ရန်</button>
+          </div>
+          <div class=" justify-center items-center md:flex-2 p-5 mr-0 md:mr-5">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBMxnbR5ogypeNKnkLDVhQiWVjfWVChwseJw&usqp=CAU" alt="Image" class="text-center mx-auto w-full md:w-40 md:h-auto md:rounded-lg object-cover hover:opacity-80">
+          </div>
+        </div>
+      </section>
+      
+      <section id="section4" class="my-20">
+        <div class="flex flex-col md:flex-row">
+          <div class="w-full md:w-4/5">
+            <div class="mb-4">
+              <!-- First row in politic1 -->
+              <div class="p-4">
+                <!-- Content for firstPolitic1 -->
+                <img src="https://images.squarespace-cdn.com/content/v1/518ee9e6e4b02c1428e17e12/1523552948113-F0P9KHONDZVQV3YEFCVF/Star+of+Sierra+Leone+VI+Diamond.jpg" alt="Image" class="object-cover hover:opacity-80 w-full">
+                <h2 class="text-lg font-bold mt-2">Sierra Leone ကြယ်ပွင့် </h2>
+                <p class="text-gray-600 mb-2 text-sm">Date - 10.2.2022</p>
+                <p class="text-gray-700 mb-4">Sierra Leone ကြယ်ပွင့်ကို Valentine's Day 1972 တွင် ရှာဖွေတွေ့ရှိခဲ့သည်။ အဆိုပါစိန်ကြမ်းသည် အလေးချိန် 968.9 ကာရက်ရှိပြီး ခန့်မှန်းခြေအားဖြင့် 195 ဂရမ်ရှိသည်။ ဆီရာရာလီယွန် မြို့တော် ဖရီးတောင်း အရှေ့ဘက် ကီလိုမီတာ ၃၂၀ အကွာတွင် ရှာဖွေတွေ့ရှိခဲ့သည်။</p>
+              </div>
+            </div>
+            <div>
+              <!-- Second row in politic1 -->
+              <div class="flex flex-col md:flex-row">
+                <div class="w-full md:w-1/2">
+                  <div class="p-4">
+                    <!-- Content for rightPolitic1 -->
+                    <img src="https://worldkings.org/userfiles/upload/images/modules/news/2020/9/9/0_2-Lesedi-La-Rona.jpg" alt="Image" class="object-cover hover:opacity-80 w-full">
+                    <h2 class="text-lg font-bold mt-2">ဆီရာရာလီယွန်သည် ကမ္ဘာ့အချမ်းသာဆုံးနိုင်ငံဖြစ်သင့်သည်။</h2>
+                  </div>
+                </div>
+                <div class="w-full md:w-1/2">
+                  <div class="p-4">
+                    <!-- Content for rightPolitic1 -->
+                    <img src="https://en.israelidiamond.co.il/wp-content/uploads/2018/08/Star-of-Sierra-Leone.jpg" alt="Image" class="object-cover hover:opacity-80 w-full">
+                    <h2 class="text-lg font-bold mt-2">တူးဖော်တွေ့ရှိဖူးသမျှ စတုတ္ထမြောက် အကြီးဆုံး ကျောက်မျက်အရည်အသွေး စိန်</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="w-full md:w-2/4">
+            <div class="mb-4">
+              <!-- Content for politic2, secondPolitic1 -->
+              <div class="p-4">
+                <ul>
+                  <li class="border-b-2 border-gray-300">
+                    <!-- Content for the first item with image -->
+                    <img src="https://images.squarespace-cdn.com/content/v1/518ee9e6e4b02c1428e17e12/1523552981476-X7LUIXNCKJVOKP8XW5ZE/Star+of+Sierra+Leone+VI+Ring.jpg" alt="Image" class="object-cover hover:opacity-80 w-full">
+                    <h2 class="text-lg font-bold mt-2">ဘယ်နိုင်ငံ က စိန်တွေ ပေါလဲ ။</h2>
+                    <p class="text-gray-600 mb-2 text-sm">Date - 10.2.2022</p>
+                  </li>
+                  <li class="border-b-2 border-gray-300">
+                    <!-- Content for the second item without image -->
+                    <h2 class="text-lg font-bold mt-2">ဘယ်နိုင်ငံက စိန်က အကောင်းဆုံးလဲ။</h2>
+                    <p class="text-gray-600 mb-2 text-sm">Date - 10.2.2022</p>
+                  </li>
+                  <li class="border-b-2 border-gray-300">
+                    <!-- Content for the third item without image -->
+                    <h2 class="text-lg font-bold mt-2">ဆီယာရာလီယွန်ကြယ်ပွင့်ကို ဘယ်သူရှာဖွေတွေ့ရှိခဲ့လဲ။</h2>
+                    <p class="text-gray-600 mb-2 text-sm">Date - 10.2.2022</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div>
+              <!-- Content for politic2, secondPolitic2 -->
+              <div class="p-4 ">
+                <img src="https://images.squarespace-cdn.com/content/v1/518ee9e6e4b02c1428e17e12/1623931595674-9XHDY8C30DGXKLTKI3Y3/Worlds-Third-Largest-Diamond-Debswana-Diamond-Company-Facebook.jpeg" alt="Image" class="object-cover hover:opacity-80 w-full md:h-40 md:w-64 mt-10">
+                <h2 class="text-lg font-bold mt-2">ဆီယာရာလီယွန်စိန်များသည် အဘယ်ကြောင့်ထူးခြားသနည်း။</h2>
+              </div>
+            </div>
+          </div>
+          <div class="w-full md:w-2/4">
+            <div class="mt-4">
+              <!-- Content for politic3, thirdPolitic1 -->
+              <img src="https://static.dw.com/image/41650731_6.jpg" alt="Image" class="object-cover hover:opacity-80 w-full">
+              <h2 class="text-2xl font-bold mt-2">စိန်က ဘာကြောင့် နာမည်ကြီးတာလဲ။</h2>
+              <p class="text-gray-600 mb-2 text-sm">Date - 10.2.2022</p>
+              <p class="text-gray-700 mb-4">စိန်တွေ အရမ်းမက်မောရတဲ့ အကြောင်းရင်း (သူတို့ရဲ့ ထင်ရှားတဲ့ အပြင်ပန်းဆွဲဆောင်မှုထက်) ဟာ မယုံနိုင်လောက်အောင် ရှားပါးတာကြောင့်ပါ။ ယနေ့ခေတ်နှင့် ခေတ်ကြီးတွင်၊ စိန်များသည် ကမ္ဘာတစ်ဝှမ်းရှိ ဈေးဝယ်စင်တာတိုင်းတွင် တွေ့နေရသောကြောင့် ရှားပါးပစ္စည်းဖြစ်ကြောင်း ယုံရခက်နေပေလိမ့်မည်။</p>
+            </div>
+            <div class="mt-10">
+              <!-- Content for politic3, thirdPolitic2 -->
+              <ul class="border-b-2 border-gray-300">
+                <li class="flex my-3 justify-center items-center">
+                  <!-- Content for the second item without image -->
+                  <h2 class="text-sm font-bold mr-1">ဘော့ဆွာနာသည် အာဖရိကတွင် အကြီးဆုံး စိန်ထုတ်လုပ်သူဖြစ်သည်။</h2>
+                  <!-- Content for the first item with image -->
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1-RvxvljFREmAQ6kYUT5-T0eih1Qw5tM7Vw&usqp=CAU" alt="Image" class="w-28 h-14 object-cover hover:opacity-80 ml-3">
+                </li>
+                <li class="flex my-3 justify-center items-center">
+                  <!-- Content for the first item with image -->
+                  <h2 class="text-sm font-bold mt-2 mr-1">စိန်နဲ့ ပတ်သက်တဲ့ အချက် ၅ ချက်က ဘာတွေလဲ။</h2>
+                  <img src="https://www.internetstones.com/image-files/star-of-sierra-leone-1.jpg" alt="Image" class="w-28 h-14 object-cover hover:opacity-80 ml-3">
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section id="section5" class="my-20">
+        <div class="flex flex-col md:flex-row">
+          <div class="md:flex justify-center items-center md:h-40 shadow-lg w-full md:w-4/5">
+            <div class="md:flex-1">
+              <div class="flex flex-col justify-center items-center h-full">
+                <h3 class="text-3xl font-extrabold md:text-5xl mb-5">စမတ်ကျကျ</h3>
+                <h3 class="text-sm md:text-lg md:font-semibold md:uppercase ml-5 md:ml-3">ကမ္ဘာတစ်ဝှမ်းရှိ သုံးစွဲသူ 14000 ကျော်မှ ယုံကြည်ပါသည်။</h3>
+              </div>
+            </div>
+            <div class="md:flex-1 text-center my-3">
+              <button class="bg-indigo-600 text-white py-2 px-4 rounded-lg">စိန်ဝယ်ရန်</button>
+            </div>
+            <div class="justify-center items-center md:flex-2 p-5 mx-auto md:mx-0">
+              <img src="https://static.vecteezy.com/system/resources/previews/014/909/753/original/new-year-2023-luxurious-numbers-of-diamond-gemstones-sparkling-against-a-background-of-falling-silver-colored-confetti-black-background-illustration-vector.jpg" alt="Image" class="text-center mx-auto w-full md:w-40 md:h-auto md:rounded-lg object-cover hover:opacity-80">
+            </div>
+          </div>
+          <div class="justify-center items-center md:flex-2 p-5 mx-auto md:mx-0 md:-mt-10">
+            <img src="https://i.fbcd.co/products/resized/resized-750-500/395-ab031fd41bdf69bd9d6e9772280fd7f5baeeb683555344c3878b0f321c33ae58.jpg" alt="Image" class="text-center mx-auto w-full md:w-40 md:h-auto md:rounded-lg object-cover hover:opacity-80">
+          </div>
+        </div>
+      </section>
+
+      <section id="section6" class="my-8">
+        <h2 class="text-2xl font-bold mb-4">စိန်ဘလော့ဂ်</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <!-- techFirstRow -->
+            <div>
+              <!-- techContentFirst1 -->
+              <div class="p-4 border-b-2 border-gray-200">
+                <!-- Content for techContentFirst1 (image, title, date, description) -->
+                <img src="https://media.istockphoto.com/id/1445819182/photo/extremely-happy-couple-running-in-a-mall.webp?b=1&s=170667a&w=0&k=20&c=m_ESINLim9hiVH-tz-KUIt6JkBFlgyAsBlFRObm52Rc=" alt="Image" class="mx-auto object-cover hover:opacity-80">
+                <h3 class="mt-3 text-2xl">စိန်၏အားသာချက်</h3>
+                <p class="my-2 text-gray-400">Date - 2.4.2023</p>
+                <p>တာရှည်ခံ၊ ထက်မြက်ပြီး ရှားပါးသောကြောင့် ၎င်းတို့ကို အလွန်တန်ဖိုးထားကြသည်။ ရင်းနှီးမြုပ်နှံမှုအဖြစ် ၎င်းတို့၏ အသက်ရှည်မှုနှင့် အလားအလာသည် ၎င်းတို့၏ ဆွဲဆောင်မှုကို တိုးစေသည်။ စိန်များသည် စွယ်စုံရရှိပြီး လက်ဝတ်ရတနာ ဒီဇိုင်းအမျိုးမျိုးတွင် ပုံသဏ္ဍာန် ပုံဖော်နိုင်စွမ်းရှိသည်။ ထို့အပြင် ၎င်းတို့သည် ချစ်ခြင်းမေတ္တာနှင့် အရေးပါသော မှတ်တိုင်များနှင့် ဆက်စပ်နေလေ့ရှိသော စိတ်ကူးယဉ်ဆန်သောတန်ဖိုးကို ကိုင်စွဲထားသည်။</p>
+              </div>
+              <ul class="p-4">
+                <li class="border-b-2 border-gray-200">
+                  <!-- First item in the ul list -->
+                  <p class="my-3">နက္ခတ်ဗေဒင်အရ စိန်ကို ဘယ်သူ ဝတ်နိုင်လဲ။</p>
+                </li>
+                <li class="border-b-2 border-gray-200">
+                  <!-- Second item in the ul list -->
+                  <p class="my-3">စိန်ရဲ့ အစွမ်းက ဘာလဲ။</p>
+                </li>
+              </ul>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <!-- techCard1 -->
+                <div class="p-4">
+                  <!-- Content for techCard1 (image, title) -->
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUHYJXEWl-7rB3mFj3vPZhYH90fmHF5ukLEQ&usqp=CAU" alt="Image" class="object-cover hover:opacity-80">
+                  <h2>စိန်တွေရဲ့ အနာဂတ်က ဘယ်လိုလဲ။</h2>
+                </div>
+              </div>
+              <div>
+                <!-- techCard2 -->
+                <div class="p-4">
+                  <!-- Content for techCard2 (image, title) -->
+                  <img src="https://www.diamondregistry.com/img/diamonds-in-china.jpeg" alt="Image" class="object-cover hover:opacity-80">
+                  <h2>စိန်ဈေးကွက် ကြီးထွားလာသလား။</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <!-- techSecondRow -->
+            <div class=" w-full md:w-80">
+              <!-- techContentSecond1 -->
+              <div class="p-4 w-full md:w-96 mb-6">
+                <!-- Content for techContentSecond1 (image, title, date) -->
+                <img src="https://www.77diamonds.com/images/img-2020/LandingPages/CreateYourOwn/M_CYO_ER_DJ_x1.jpg?v=2" alt="Image" class="md:h-40 md:w-72 object-cover hover:opacity-80">
+                <h2 class="my-3">အိမ်ထောင်ရေးမှာ စိန်ဆိုတာ ဘာကို ဆိုလိုတာလဲ။</h2>
+                <p class="text-gray-400">Date - 2.5.2023</p>
+              </div>
+              <!-- techContentSecond2 -->
+              <div class="p-4 w-full md:w-96 mb-6">
+                <!-- Content for techContentSecond2 (image, title, date) -->
+                <img src="data:image/jpeg;base64,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" alt="Image" class="md:h-40 md:w-72 object-cover hover:opacity-80">
+                <h2 class="my-3">စိန်လက်စွပ်ကို လက်ထပ်ခွင့်တောင်းဖို့ ဘာကြောင့် သုံးတာလဲ။</h2>
+                <p class="text-gray-400">Date - 2.5.2023</p>
+              </div>
+              <!-- techContentSecond3 -->
+              <div class="p-4 w-full md:w-96">
+                <!-- Content for techContentSecond3 (image, title, date) -->
+                <img src="https://i.pinimg.com/736x/01/fa/5c/01fa5c9d353137d60f6d289ce043ef38.jpg" alt="Image" class="md:h-40 md:w-72 object-cover hover:opacity-80">
+                <h2 class="my-3">လက်ထပ်လက်စွပ်အတွက် ဘယ်အမှတ်တံဆိပ် စိန်လက်စွပ်က အကောင်းဆုံးလဲ။</h2>
+                <p class="text-gray-400">Date - 2.5.2023</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section id="section7" class="my-8">
+        <h2 class="text-2xl font-bold mb-4">ကမ္ဘာ့ဈေးအကြီးဆုံးစိန် ၁၀ မျိုး</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <!-- sevenFirstRow -->
+            <div class="relative">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/b/b7/Rough_cullinan_diamond.jpg" alt="Image" class="w-full h-auto object-cover hover:opacity-80">
+              <div class="absolute bottom-0 left-0 bg-black bg-opacity-20 bg-gradient-to-br text-white p-2">
+                <button class="text-xs font-bold uppercase rounded-sm bg-green-300 px-4 py-1">The Cullinan Diamond</button>
+                <h3 class="text-lg font-bold my-3">ဒေါ်လာ သန်း ၄၀၀
+                  Cullinan I သို့မဟုတ် the Star of Africa ဟုခေါ်သော မူလကျောက်တုံးမှ ဖြတ်တောက်ထားသော အဓိကစိန် ကိုးလုံးအနက် အကြီးဆုံး...</h3>
+                <p class="text-xs">Date - 20.1.2023</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <!-- sevenSecondRow -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <!-- Card 1 -->
+                <div class="p-4">
+                  <img src="https://www.graff.com/dw/image/v2/BFNT_PRD/on/demandware.static/-/Library-Sites-GraffSharedLibrary/default/dwc9725f96/images/content-pages/lesedi-la-rona/A-Graff-team-member-examining-the-Graff-Lesedi-La-Rona-Square-Emerald-Cut-Diamond-2000x1333.jpg" alt="Image" class="w-full h-36 object-cover hover:opacity-80">
+                  <h3 class="text-lg font-bold">အနည်းဆုံး နှစ်ပေါင်း 2.5 ဘီလီယံ သက်တမ်းရှိမည်ဟု ခန့်မှန်းရသည့် စိန်ကြမ်းကို...</h3>
+                </div>
+              </div>
+              <div>
+                <!-- Card 2 -->
+                <div class="p-4">
+                  <img src="https://yourbotswana.com/wp-content/uploads/2020/01/yb-positive-outlook-diamonds.png" alt="Image" class="w-full h-36 object-cover hover:opacity-80">
+                  <h3 class="text-lg font-bold">ရှားပါးသော လက်သီးအရွယ် ကျောက်တုံးသည် အနည်းဆုံး စတာလင်ပေါင် သန်း 40 တန်ကြေးရှိမည်ဟု...</h3>
+                </div>
+              </div>
+              <div>
+                <!-- Card 3 -->
+                <div class="p-4">
+                  <img src="https://www.asiaone.com/sites/default/files/original_images/Jan2014/20140124_diamond_shutterstock.jpg" alt="Image" class="w-full h-36 object-cover hover:opacity-80">
+                  <h3 class="text-lg font-bold">Sierra Leone ရှိ အတွင်း၌ 968.9 ကာရက်ရှိသော စိန်တစ်လုံးကို ရှာဖွေတွေ့ရှိ...</h3>
+                </div>
+              </div>
+              <div>
+                <!-- Card 4 -->
+                <div class="p-4">
+                  <img src="https://images.squarespace-cdn.com/content/v1/518ee9e6e4b02c1428e17e12/1523383090734-F1M0AWD34JWW9QBAUYV7/Millennium+Star+Diamond_De+Beers.jpg" alt="Image" class="w-full h-36 object-cover hover:opacity-80">
+                  <h3 class="text-lg font-bold">69.69 ကာရက်ရှိသော သစ်တော်သီးပုံစံ ကျောက်မျက်ရတနာဖြစ်..</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  </main>
+
+  <footer class="bg-gray-900 text-white p-4">
+    <!-- Add your footer content here -->
+    <section id="section7" class="my-4 p-3">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="col-span-1 mt-6">
+          <!-- footerCol1 -->
+          <h3 class="text-xl font-bold mb-3">ကျွန်တော်တို့အကြောင်း</h3>
+          <h2 class="text-xl font-bold mb-4 uppercase">Gleaming Gems & Brilliant Baubles</h2>
+          <p class="text-sm mb-2">ကျွန်ုပ်တို့၏ အတွေ့အကြုံရှိ ကျောက်မျက်ဗေဒပညာရှင်များနှင့် စိန်ပညာရှင်အဖွဲ့သည် ကျွန်ုပ်တို့၏စုဆောင်းမှုတွင် စိန်တစ်လုံးစီကို သေသေချာချာ စေ့စေ့စပ်စပ်ရွေးချယ်၍ အကောင်းဆုံးအရည်အသွေးကိုသာ အာမခံပါသည်။ ဆယ်စုနှစ်များစွာ ပေါင်းစပ်ထားသော အတွေ့အကြုံဖြင့်၊ ကျွန်ုပ်တို့သည် အစိတ်အပိုင်းတိုင်းအတွက် အသေးစိတ်လက်မှုပညာနှင့် အာရုံစူးစိုက်မှု မယှဉ်နိုင်သော အဆင့်တစ်ခုကို ယူဆောင်လာပါသည်။</p>
+          <p class="text-sm mb-2">ကျွန်ုပ်တို့၏စိန်များကို တာဝန်သိစွာရရှိပြီး တင်းကျပ်သောစက်မှုလုပ်ငန်းစံနှုန်းများကို လိုက်နာကြောင်း သေချာစေမည့် ကျင့်ဝတ်ဆိုင်ရာ အရင်းအမြစ်များနှင့် ရေရှည်တည်တံ့သော အလေ့အကျင့်များအတွက် ကျွန်ုပ်တို့၏ကတိကဝတ်အတွက် ဂုဏ်ယူပါသည်။ </p>
+          <p class="text-sm">စက်မှုလုပ်ငန်းတွင် နှစ်ပေါင်းများစွာ ကျွမ်းကျင်မှုဖြင့်၊ ကျွန်ုပ်တို့၏ ကျွမ်းကျင်သော ကျောက်မျက်ဗေဒပညာရှင်များနှင့် စိန်အထူးကုအဖွဲ့မှ စိန်တစ်လုံးစီအား အမြင့်မားဆုံး အရည်အသွေးနှင့် ထက်မြက်မှုရှိစေရန် ရွေးချယ်ပေးကာ ဝယ်ယူသူတိုင်းသည် ၎င်းတို့၏ ပြီးပြည့်စုံသော ဇိမ်ခံပစ္စည်းကို ရှာဖွေတွေ့ရှိကြောင်း အာမခံပါသည်။
+          </p>
+        </div>
+        <div class="col-span-1 md:mt-6">
+          <!-- footerCol2 -->
+          <ul>
+            <li class="border-b-2">
+              <div class="flex items-center my-2">
+                <div class="mr-3">
+                  <img src="https://cdn.vox-cdn.com/thumbor/LQcnAsuua9B7eM1NsL6VnNTd0xA=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/24636443/GettyImages_52102893.jpg" alt="Image" class="w-20 h-12">
+                </div>
+                <div>
+                  <h3 class="text-sm capitalize font-bold">koh-i-noor စိန်ကို ဘယ်သူပိုင်လဲ။</h3>
+                  <p class="text-xs text-gray-500">Date 1.2.2023</p>
+                </div>
+              </div>
+            </li>
+            <li class="border-b-2">
+              <div class="flex items-center my-2">
+                <div class="mr-3">
+                  <img src="https://d1sv0smbkmwaa3.cloudfront.net/image-files/excelsior-diamond.jpg" alt="Image" class="w-20 h-12">
+                </div>
+                <div>
+                  <h3 class="text-sm capitalize font-bold">Excelsior စိန်တွေက ဘယ်လောက်ကြီးလဲ။</h3>
+                  <p class="text-xs text-gray-500">Date 2.2.2023</p>
+                </div>
+              </div>
+            </li>
+            <li class="border-b-2">
+              <div class="flex items-center my-2">
+                <div class="mr-3">
+                  <img src="https://rosenbergdiamonds.com/wp-content/uploads/2019/05/large-asscher-cut-diamond-engagement-ring-500x500.jpg" alt="Image" class="w-20 h-12">
+                </div>
+                <div>
+                  <h3 class="text-sm capitalize font-bold">ကြယ်စုစိန်ဆိုတာ ဘာလဲ။</h3>
+                  <p class="text-xs text-gray-500">Date 3.2.2023</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="col-span-1 md:mt-6">
+          <!-- footerCol3 -->
+          <ul>
+            <li class="mb-3 ml-12">
+              <h3>ရန်ကုန်</h3>
+              <p class="text-sm text-gray-400">4792 Baker Avenue
+                Dallas, TX 75207</p>
+            </li>
+            <li class="mb-3 ml-12">
+              <h3>မန္တလေး</h3>
+              <p class="text-sm text-gray-400">794 Simpson Street
+                Rock Island, IL 61201</p>
+            </li>
+            <li class="mb-3 ml-12">
+              <h3>ပုဂံ</h3>
+              <p class="text-sm text-gray-400">4616 Junkins Avenue
+                Albany, GA 31707</p>
+            </li>
+            <li class="mb-3 ml-12">
+              <h3>နေပြည်တော်</h3>
+              <p class="text-sm text-gray-400">2793 Ashton Lane
+                Austin, TX 78701
+                </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </footer>
+
+<script src="script.js"></script>
+</body>
+
+</html>

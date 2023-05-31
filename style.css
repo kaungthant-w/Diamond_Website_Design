@@ -1,0 +1,59 @@
+.dark {
+  background-color: #111827;
+  color: #F9FAFB;
+}
+
+.dark .navbar {
+  background-color: #1F2937;
+}
+
+.dark .navbar a,
+.dark .navbar button {
+  color: #F9FAFB;
+}
+
+.card {
+flex: 0 0 300px; /* Adjust the card width as needed */
+cursor: pointer;
+}
+
+.flex-nowrap {
+flex-wrap: nowrap;
+}
+
+@media (max-width: 767px) {
+  #navbar {
+    position: absolute;
+    top: 10rem;
+    flex-direction: column;
+    background-color: white;
+
+  }
+
+  #mobileNav {
+    flex-direction: column;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+}
+
+@media (max-width: 767px) {
+  #section2 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  #prevButton {
+    left: 2rem;
+    right: 1rem;
+    top: 1rem;
+  }
+
+  #nextButton {
+    right: 2rem;
+    top: 1rem;
+  }
+}
