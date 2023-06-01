@@ -102,14 +102,14 @@ const navbar = document.getElementById("navbar");
   function hideNavbarOnSmallDevice() {
     if (window.innerWidth < 768) {
       navbar.classList.add("hidden");
-      subdropdown.classList.add("md:absolute", "left-32", "top-2", "mt-2", "md:w-96");
+      subdropdown.classList.add("md:absolute", "left-36", "top-2", "mb-2", "md:w-96");
       document.querySelectorAll("#mobileNav > li").forEach((li) => {
         li.setAttribute("data-aos", "fade-up");
         li.setAttribute("data-aos-duration", "3000");
       });
     } else {
       navbar.classList.remove("hidden");
-      subdropdown.classList.remove("md:absolute", "right-0", "top-full", "mt-2", "md:w-96");
+      subdropdown.classList.remove("md:absolute", "right-12", "top-full", "md:w-96");
       document.querySelectorAll("#mobileNav > li").forEach((li) => {
         li.removeAttribute("data-aos");
         li.removeAttribute("data-aos-duration");
