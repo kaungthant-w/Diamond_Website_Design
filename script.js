@@ -131,30 +131,30 @@ const navbar = document.getElementById("navbar");
   });
 
 
-  // scroll 
-  window.sr = ScrollReveal();
+//   // scroll 
+//   window.sr = ScrollReveal();
 
-  const reveal = {
-    origin : 'bottom',
-    delay    : 500,
-    duration: 2000,
-    distance : '500px',
-    viewFactor: 0.8,
-    easing   : 'ease-in-out',
-    mobile: true,
-  };
+//   const reveal = {
+//     origin : 'bottom',
+//     delay    : 500,
+//     duration: 2000,
+//     distance : '500px',
+//     viewFactor: 0.8,
+//     easing   : 'ease-in-out',
+//     mobile: true,
+//   };
 
   
 
-sr.reveal('#section1');
-sr.reveal('#section2');
-sr.reveal('#sierraLeone');
-sr.reveal('#section3');
-sr.reveal('#section4');
-sr.reveal('#section5');
-sr.reveal('#section6');
-sr.reveal('#section7');
-sr.reveal('#footer');
+// sr.reveal('#section1');
+// sr.reveal('#section2');
+// sr.reveal('#sierraLeone');
+// sr.reveal('#section3');
+// sr.reveal('#section4');
+// sr.reveal('#section5');
+// sr.reveal('#section6');
+// sr.reveal('#section7');
+// sr.reveal('#footer');
 
 
 //aos
