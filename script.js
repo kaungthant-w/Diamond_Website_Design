@@ -2,11 +2,17 @@ function toggleDarkMode() {
     const body = document.body;
     const bgdark = document.getElementById("bgdark");
     const navbar = document.getElementById('navbar');
+    const mobileNav = document.getElementById("mobileNav");
     const icons = document.querySelectorAll('.dark-mode-icon');
+    const subdropdown = document.querySelector(".subdropdown");
     body.classList.toggle('dark');
     bgdark.classList.toggle('dark');
     navbar.classList.toggle('bg-gray-900');
     navbar.classList.toggle('text-white');
+    mobileNav.classList.toggle('bg-gray-900');
+    subdropdown.classList.toggle('bg-gray-900');
+    subdropdown.classList.toggle('border-none');
+    
     for (let i = 0; i < icons.length; i++) {
       icons[i].classList.toggle('text-gray-600');
     }
@@ -69,8 +75,10 @@ cards.forEach((card) => {
   });
 });
 
+
+//navbar 
 const navbar = document.getElementById("navbar");
-const subdropdown = document.querySelector(".subdropdown");
+  const subdropdown = document.querySelector(".subdropdown");
 
   function toggleSubDropdown(event) {
     event.preventDefault();
@@ -85,13 +93,27 @@ const subdropdown = document.querySelector(".subdropdown");
     if (!subdropdown.contains(targetElement)) {
       subdropdown.classList.add("hidden");
     }
+
+    if (navbar.contains(targetElement) && window.innerWidth < 768) {
+      navbar.classList.add("hidden");
+    }
   });
 
   function hideNavbarOnSmallDevice() {
     if (window.innerWidth < 768) {
       navbar.classList.add("hidden");
+      subdropdown.classList.add("md:absolute", "left-32", "top-2", "mt-2", "md:w-96");
+      document.querySelectorAll("#mobileNav > li").forEach((li) => {
+        li.setAttribute("data-aos", "fade-up");
+        li.setAttribute("data-aos-duration", "3000");
+      });
     } else {
       navbar.classList.remove("hidden");
+      subdropdown.classList.remove("md:absolute", "right-0", "top-full", "mt-2", "md:w-96");
+      document.querySelectorAll("#mobileNav > li").forEach((li) => {
+        li.removeAttribute("data-aos");
+        li.removeAttribute("data-aos-duration");
+      });
     }
   }
 
@@ -101,3 +123,44 @@ const subdropdown = document.querySelector(".subdropdown");
   function toggleMobileMenu() {
     navbar.classList.toggle("hidden");
   }
+
+  subdropdown.addEventListener("click", function () {
+    if (window.innerWidth < 768) {
+      navbar.classList.add("hidden");
+    }
+  });
+
+
+  // scroll 
+  window.sr = ScrollReveal();
+
+  const reveal = {
+    origin : 'bottom',
+    delay    : 500,
+    duration: 2000,
+    distance : '500px',
+    viewFactor: 0.8,
+    easing   : 'ease-in-out',
+    mobile: true,
+  };
+
+  
+
+sr.reveal('#section1');
+sr.reveal('#section2');
+sr.reveal('#sierraLeone');
+sr.reveal('#section3');
+sr.reveal('#section4');
+sr.reveal('#section5');
+sr.reveal('#section6');
+sr.reveal('#section7');
+sr.reveal('#footer');
+
+
+//aos
+AOS.init({
+  offset: 200,
+  duration: 600,
+  easing: 'ease-in-sine',
+  delay: 100,
+});

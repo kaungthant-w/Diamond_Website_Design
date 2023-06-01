@@ -1,0 +1,40 @@
+<header class="p-4 flex items-center justify-between">
+    <div class="flex items-center space-x-4">
+      <a href="#">
+        <svg class="h-6 w-6 text-gray-600 z-50" fill="currentColor" viewBox="0 0 24 24" id="menu">
+          <i class="fas fa-bars sm:relative" onclick="toggleMobileMenu()"></i>
+        </svg>
+      </a>
+    </div>
+    <div id="navbar" class="flex items-center space-x-8 rounded-lg border-2 border-gray-100 z-40 mt-2">
+      <ul class="md:flex items-center space-x-8 p-3 rounded-md" id="mobileNav">
+        <li class="my-4 md:my-2"><a href="#">ပင်မစာမျက်နှာ</a></li>
+        <li class="relative my-4 md:my-2">
+          <a href="#" onclick="toggleSubDropdown(event)">ကျောက်ရတနာပြပွဲ <i class="fa-solid fa-chevron-right text-gray-400 text-xs ml-2"></i></a>
+          <ul class="subdropdown absolute bg-gradient-to-br bg-gray-200 hidden text-gray-700 py-3 mt-1 rounded-md shadow-lg px-10 text-sm w-40">
+            <li class="mb-3 border-b-2 border-b-2 border-gray-200 z-40 w-100 hover:text-gray-900"><a href="#section1">စိန်ရှာဖွေမှုများ</a></li>
+            <li class="mb-3 border-b-2 border-b-2 border-gray-200 z-40 w-100 hover:text-gray-900"><a href="#section2">ဘယ်လိုရွေးချယ်မလဲ</a></li>
+            <li class="mb-3 border-b-2 border-b-2 border-gray-200 z-40 w-100 hover:text-gray-900"><a href="#section3">Gems ရှာဖွေမှုများ</a></li>
+          </ul>
+        </li>
+        <li class="my-4 md:my-2"><a href="#section4">ကျောက်မျက်လမ်းညွှန်</a></li>
+        <li class="my-4 md:my-2"><a href="#section5">ရတနာခရီး</a></li>
+        <li class="my-4 md:my-2"><a href="#section6">စိန်ဘလော့ဂ်</a></li>
+        <li class="my-4 md:my-2"><a href="#section7">ကျောက်မျက်များ</a></li>
+      </ul>
+    </div>
+    <div class="flex items-center space-x-4">
+      <a href="#" class="dark-mode-icon text-gray-600" onclick="toggleDarkMode()">
+        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+          <!-- Add your dark mode icon SVG code here -->
+          <i class="fas fa-moon"></i>
+        </svg>
+      </a>
+      <a href="#" class="dark-mode-icon text-gray-600">
+        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+          <!-- Add your search icon SVG code here -->
+          <i class="fas fa-search"></i>
+        </svg>
+      </a>
+    </div>
+  </header>
